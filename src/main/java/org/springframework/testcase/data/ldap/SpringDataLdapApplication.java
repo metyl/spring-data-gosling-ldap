@@ -22,7 +22,8 @@ public class SpringDataLdapApplication {
         @Bean
         ContextSource contextSource() {
             LdapContextSource contextSource = new LdapContextSource();
-            contextSource.setUrl("ldap://localhost:389/");
+            contextSource.setBase("dc=example,dc=com");
+            contextSource.setUrl("ldap://localhost:18880/");
             return contextSource;
         }
 
